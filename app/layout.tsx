@@ -21,6 +21,15 @@ export const metadata: Metadata = {
   },
   description: siteDescription,
   applicationName: siteName,
+  authors: [{ name: siteName, url: siteUrl }],
+  creator: siteName,
+  publisher: siteName,
+  referrer: "origin-when-cross-origin",
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
+  },
   category: "shopping",
   keywords: [
     "bucket balon Singaraja",
@@ -47,6 +56,10 @@ export const metadata: Metadata = {
     description: siteDescription,
   },
   robots: { index: true, follow: true },
+  other: {
+    "geo.region": "ID-BA",
+    "geo.placename": "Singaraja, Bali",
+  },
 };
 
 export default function RootLayout({

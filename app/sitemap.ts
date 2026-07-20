@@ -1,4 +1,5 @@
 import type { MetadataRoute } from "next";
+import { galleryItems } from "./components/gallery/gallery-data";
 import { siteUrl } from "./lib/site";
 
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -8,6 +9,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: new Date(),
       changeFrequency: "weekly",
       priority: 1,
+    },
+    {
+      url: siteUrl + "/galeri",
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.8,
+      images: galleryItems.map((item) => new URL(item.src.src, siteUrl).toString()),
     },
   ];
 }
