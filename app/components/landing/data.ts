@@ -13,7 +13,7 @@ import {
   Truck,
 } from "lucide-react";
 
-export const instagramUrl = "https://www.instagram.com/ansbalon_singaraja/";
+export { siteInstagramUrl as instagramUrl } from "../../lib/site";
 
 const whatsappNumber = "6285645084993";
 
