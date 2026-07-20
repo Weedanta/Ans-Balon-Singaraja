@@ -14,7 +14,6 @@ import image06 from "../../assets/Instagram/749132655_1343128510923580_572057768
 import image07 from "../../assets/Instagram/749066264_2619327215167816_8651730151562532074_n.jpg";
 import image08 from "../../assets/Instagram/749066220_1049960307526504_6149981294421032920_n.jpg";
 import image09 from "../../assets/Instagram/749041494_1057544770560409_853881942459720279_n.jpg";
-import image10 from "../../assets/Instagram/749022579_1602431764932569_3556043378727103181_n.jpg";
 import image11 from "../../assets/Instagram/748907619_1716143893030558_4019991182128673225_n.jpg";
 import image12 from "../../assets/Instagram/748882954_1044094895028790_1695541662913988708_n.jpg";
 import image13 from "../../assets/Instagram/748811209_1318842016657705_1116873374322578681_n.jpg";
@@ -61,7 +60,6 @@ const imageSources = [
   image07,
   image08,
   image09,
-  image10,
   image11,
   image12,
   image13,
