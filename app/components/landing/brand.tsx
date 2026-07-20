@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { ArrowUpRight, Camera as Instagram, Clock3, MapPin, MessageCircle, PartyPopper } from "lucide-react";
 import { Magnetic } from "../magnetic";
 import { VelocityMarquee } from "../velocity-marquee";
@@ -45,8 +46,8 @@ export function Header() {
       </div>
       <header className="sticky top-0 z-50 edge-b bg-paper">
         <nav aria-label="Navigasi utama" className="mx-auto flex h-[78px] max-w-7xl items-center justify-between px-5 sm:px-8 lg:px-10">
-          <a
-            href="#beranda"
+          <Link
+            href="/#beranda"
             className="group flex items-center gap-3 rounded-full focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-pink"
             aria-label="Ansbalon Singaraja, kembali ke beranda"
           >
@@ -54,20 +55,21 @@ export function Header() {
             <span className="font-display text-lg font-bold tracking-[-0.01em] text-ink">
               ansbalon<span className="text-pink">.</span>
             </span>
-          </a>
+          </Link>
           <div className="hidden items-center gap-2 text-sm font-bold text-ink md:flex">
             {[
-              { href: "#koleksi", label: "Koleksi" },
-              { href: "#keunggulan", label: "Keunggulan" },
-              { href: "#cara-pesan", label: "Cara pesan" },
+              { href: "/#koleksi", label: "Koleksi" },
+              { href: "/galeri", label: "Galeri" },
+              { href: "/#keunggulan", label: "Keunggulan" },
+              { href: "/#cara-pesan", label: "Cara pesan" },
             ].map((link) => (
-              <a
+              <Link
                 key={link.href}
                 href={link.href}
                 className="rounded-full px-4 py-2 transition hover:-rotate-2 hover:bg-lime"
               >
                 {link.label}
-              </a>
+              </Link>
             ))}
           </div>
           <Magnetic>

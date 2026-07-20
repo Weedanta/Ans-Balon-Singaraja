@@ -10,7 +10,7 @@ import { whatsappUrl } from "./data";
 export function Hero() {
   return (
     <>
-      <section id="beranda" className="halftone relative isolate flex h-screen items-center overflow-hidden bg-pink edge-b">
+      <section id="beranda" className="halftone relative isolate flex md:h-min-h-screen lg:h-[85vh] items-center overflow-hidden bg-pink edge-b">
         <div className="absolute inset-0 bg-pink/94" aria-hidden="true" />
         <div className="relative mx-auto grid w-full max-w-7xl items-center gap-8 px-5 py-4 sm:px-8 lg:grid-cols-[1.05fr_0.95fr] lg:gap-16 lg:px-10">
           <div className="relative z-10 max-w-2xl">
