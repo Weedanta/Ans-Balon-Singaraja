@@ -12,6 +12,7 @@
 
 # testing
 /coverage
+*.test.mjs
 
 # next.js
 /.next/
@@ -43,4 +44,4 @@ next-env.d.ts
 # agent files
 CLAUDE.md
 AGENTS.md
-
+docs/superpowers/
