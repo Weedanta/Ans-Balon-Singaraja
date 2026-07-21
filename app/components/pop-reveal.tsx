@@ -32,6 +32,9 @@ export function PopReveal({ children, className, delay = 0 }: PopRevealProps) {
           duration: 1.05,
           delay,
           ease: "expo.out",
+          onComplete: () => {
+            gsap.set(el, { clearProps: "clipPath" });
+          },
           scrollTrigger: {
             trigger: el,
             start: "top 85%",

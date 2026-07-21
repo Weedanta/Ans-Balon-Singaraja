@@ -17,5 +17,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.8,
       images: galleryItems.map((item) => new URL(item.src.src, siteUrl).toString()),
     },
+    {
+      url: siteUrl + "/link",
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.6,
+    },
   ];
 }

@@ -2,9 +2,10 @@ import Image from "next/image";
 import Link from "next/link";
 import { ArrowUpRight, Camera as Instagram, Clock3, MapPin, MessageCircle, PartyPopper } from "lucide-react";
 import { Magnetic } from "../magnetic";
+import { TiktokIcon } from "../tiktok-icon";
 import { VelocityMarquee } from "../velocity-marquee";
 import { hasLogoFile } from "../../lib/logo";
-import { instagramUrl, whatsappUrl } from "./data";
+import { instagramUrl, tiktokUrl, whatsappUrl } from "./data";
 
 export function BrandMark() {
   if (hasLogoFile()) {
@@ -120,6 +121,10 @@ export function Footer() {
               </span>
               <a href={instagramUrl} target="_blank" rel="noreferrer" className="sticker press-sm px-4 py-2 text-ink">
                 <Instagram aria-hidden="true" size={15} />
+                @ansbalon_singaraja
+              </a>
+              <a href={tiktokUrl} target="_blank" rel="noreferrer" className="sticker press-sm px-4 py-2 text-ink">
+                <TiktokIcon aria-hidden="true" size={15} />
                 @ansbalon_singaraja
               </a>
             </div>

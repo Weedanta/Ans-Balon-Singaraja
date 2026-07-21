@@ -13,7 +13,7 @@ import {
   Truck,
 } from "lucide-react";
 
-export { siteInstagramUrl as instagramUrl } from "../../lib/site";
+export { siteInstagramUrl as instagramUrl, siteTiktokUrl as tiktokUrl } from "../../lib/site";
 
 const whatsappNumber = "6285645084993";
 

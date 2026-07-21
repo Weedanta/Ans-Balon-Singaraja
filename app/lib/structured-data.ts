@@ -5,6 +5,7 @@ import {
   siteName,
   sitePhone,
   sitePriceRange,
+  siteTiktokUrl,
   siteUrl,
 } from "./site.ts";
 
@@ -25,7 +26,7 @@ export function getStoreJsonLd() {
     telephone: sitePhone,
     priceRange: sitePriceRange,
     areaServed: siteAreaServed,
-    sameAs: [siteInstagramUrl],
+    sameAs: [siteInstagramUrl, siteTiktokUrl],
   };
 }
 
