@@ -5,18 +5,25 @@ import { Magnetic } from "../magnetic";
 import { TiktokIcon } from "../tiktok-icon";
 import { VelocityMarquee } from "../velocity-marquee";
 import { hasLogoFile } from "../../lib/logo";
+import { StickyMobileCta } from "../sticky-mobile-cta";
 import { instagramUrl, tiktokUrl, whatsappUrl } from "./data";
 
 export function BrandMark() {
   if (hasLogoFile()) {
     return (
-      <span className="edge relative grid size-10 place-items-center overflow-hidden rounded-xl bg-white shadow-pop-sm">
-        <Image src="/logo.png" alt="Logo ANS Balon Singaraja" fill sizes="40px" className="object-contain p-1" />
+      <span className="edge relative grid size-10 place-items-center overflow-hidden rounded-full bg-[#f6eee3] shadow-pop-sm">
+        <Image
+          src="/logo.png"
+          alt="Logo ANS Balon Singaraja"
+          fill
+          sizes="40px"
+          className="scale-[1.14] object-contain"
+        />
       </span>
     );
   }
   return (
-    <span className="edge grid size-10 place-items-center rounded-xl bg-pink text-white shadow-pop-sm">
+    <span className="edge grid size-10 place-items-center rounded-full bg-pink text-white shadow-pop-sm">
       <PartyPopper aria-hidden="true" size={20} strokeWidth={2.4} />
     </span>
   );
@@ -131,18 +138,7 @@ export function Footer() {
           </div>
         </div>
       </footer>
-      <div className="fixed inset-x-4 bottom-4 z-50 sm:hidden">
-        <a
-          href={whatsappUrl}
-          target="_blank"
-          rel="noreferrer"
-          className="edge press flex h-14 items-center justify-center gap-3 rounded-full bg-pink px-6 text-sm font-black text-white shadow-pop"
-        >
-          <MessageCircle aria-hidden="true" size={18} />
-          Pesan via WhatsApp
-          <ArrowUpRight aria-hidden="true" size={17} />
-        </a>
-      </div>
+      <StickyMobileCta />
     </>
   );
 }

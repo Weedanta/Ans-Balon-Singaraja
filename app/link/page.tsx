@@ -104,11 +104,17 @@ export default function LinkPage() {
         <div className="mx-auto my-auto w-full max-w-md py-16">
         <Reveal className="flex flex-col items-center text-center">
           {hasLogoFile() ? (
-            <span className="edge relative size-20 overflow-hidden rounded-[24px] bg-white shadow-pop-lg">
-              <Image src="/logo.png" alt={`Logo ${siteName}`} fill sizes="80px" className="object-cover" />
+            <span className="edge relative size-20 overflow-hidden rounded-full bg-[#f6eee3] shadow-pop-lg">
+              <Image
+                src="/logo.png"
+                alt={`Logo ${siteName} - Hadiah Balon Karakter & Buket Balon Singaraja Bali`}
+                fill
+                sizes="80px"
+                className="scale-[1.14] object-contain"
+              />
             </span>
           ) : (
-            <span className="edge grid size-20 place-items-center rounded-[24px] bg-pink-deep text-white shadow-pop-lg">
+            <span className="edge grid size-20 place-items-center rounded-full bg-pink-deep text-white shadow-pop-lg">
               <PartyPopper aria-hidden="true" size={34} strokeWidth={2.4} />
             </span>
           )}

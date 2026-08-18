@@ -3,22 +3,24 @@ import { galleryItems } from "./components/gallery/gallery-data";
 import { siteUrl } from "./lib/site";
 
 export default function sitemap(): MetadataRoute.Sitemap {
+  const baseUrl = siteUrl.replace(/\/$/, "");
+
   return [
     {
-      url: siteUrl,
+      url: baseUrl,
       lastModified: new Date(),
       changeFrequency: "weekly",
-      priority: 1,
+      priority: 1.0,
     },
     {
-      url: siteUrl + "/galeri",
+      url: `${baseUrl}/galeri`,
       lastModified: new Date(),
-      changeFrequency: "monthly",
+      changeFrequency: "weekly",
       priority: 0.8,
-      images: galleryItems.map((item) => new URL(item.src.src, siteUrl).toString()),
+      images: galleryItems.map((item) => new URL(item.src.src, baseUrl).toString()),
     },
     {
-      url: siteUrl + "/link",
+      url: `${baseUrl}/link`,
       lastModified: new Date(),
       changeFrequency: "monthly",
       priority: 0.6,

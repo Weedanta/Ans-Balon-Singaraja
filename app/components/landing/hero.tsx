@@ -1,10 +1,10 @@
-import Image from "next/image";
 import { ArrowRight, Check, MapPin, Sparkles } from "lucide-react";
 import { Reveal } from "../reveal";
 import { PopReveal } from "../pop-reveal";
 import { Magnetic } from "../magnetic";
 import { Counter } from "../counter";
 import { VelocityMarquee } from "../velocity-marquee";
+import { HeroImageSlider } from "./hero-image-slider";
 import { whatsappUrl } from "./data";
 
 export function Hero() {
@@ -84,19 +84,8 @@ export function Hero() {
               </div>
             </div>
             <div className="edge relative mx-auto aspect-[4/5] max-h-[min(640px,58svh)] rotate-1 overflow-hidden rounded-[30px] bg-white p-3 shadow-pop-lg sm:p-4">
-              <div className="relative h-full w-full overflow-hidden rounded-[18px]">
-                <Image
-                  src="/hero-balon.webp"
-                  alt="Rangkaian hadiah balon warna pastel dengan balon beruang, hati, dan bunga"
-                  fill
-                  priority
-                  sizes="(max-width: 1024px) 92vw, 46vw"
-                  className="object-cover object-[50%_48%]"
-                />
-              </div>
+              <HeroImageSlider />
             </div>
-            <span className="balloon-bob edge absolute -right-4 -top-8 size-16 rounded-full bg-lime shadow-pop-sm sm:right-2 sm:size-20" aria-hidden="true" />
-            <span className="balloon-bob-delayed edge absolute -bottom-3 -left-3 size-14 rounded-full bg-violet shadow-pop-sm sm:-left-8 sm:size-[4.5rem]" aria-hidden="true" />
           </Reveal>
         </div>
       </section>

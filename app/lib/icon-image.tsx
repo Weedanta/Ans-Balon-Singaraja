@@ -22,7 +22,7 @@ export async function renderIcon(size: number) {
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
-          background: logoSrc ? "#fff6e8" : "#ff3e8e",
+          background: logoSrc ? "#f6eee3" : "#ff3e8e",
         }}
       >
         {logoSrc ? (

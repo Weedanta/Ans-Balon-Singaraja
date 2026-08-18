@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Plus_Jakarta_Sans, Unbounded } from "next/font/google";
 import "./globals.css";
 import { siteDescription, siteName, siteTitle, siteUrl } from "./lib/site";
@@ -13,6 +13,11 @@ const body = Plus_Jakarta_Sans({
   variable: "--font-body-raw",
 });
 
+export const viewport: Viewport = {
+  themeColor: "#ff3e8e",
+  colorScheme: "light",
+};
+
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
@@ -25,6 +30,16 @@ export const metadata: Metadata = {
   creator: siteName,
   publisher: siteName,
   referrer: "origin-when-cross-origin",
+  icons: {
+    icon: [
+      { url: "/favicon.ico", sizes: "any" },
+      { url: "/icon", sizes: "32x32", type: "image/png" },
+    ],
+    apple: [
+      { url: "/apple-icon", sizes: "180x180", type: "image/png" },
+    ],
+  },
+  manifest: "/manifest.webmanifest",
   formatDetection: {
     email: false,
     address: false,
